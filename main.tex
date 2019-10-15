@@ -23,7 +23,8 @@
 \usepackage{enumitem} %better control of lists
 \usepackage{titlesec} %alternative section titles
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype} %beter fonts
-
+\usepackage{pdfpages} %insert pdfs
+\usepackage{siunitx}
 
 \usepackage[type={CC},modifier={by-nc},version={4.0}]{doclicense}
 
@@ -113,11 +114,16 @@
 \includegraphics[width=0.7\linewidth]{lg_saxion_rgb.png}
 \end{center}
 \vspace{10mm}
-Dit document is geschreven door Karin Heutinck (\href{k.j.b.heutinck@saxion.nl}{\textsf{k.j.b.heutinck@saxion.nl}}}), Taco Graafsma(\href{t.l.g.p.graafsma@saxion.nl}{\textsf{t.l.g.p.graafsma@saxion.nl}}}), en Samuel Mok (\href{s.mok@saxion.nl}{\textsf{s.mok@saxion.nl}}}), voor de opleiding Chemie van de Saxion Hogeschool ter behoeve van de leerlijn "Dataverwerking" in het jaar \the\year.
+Dit document is opgesteld door:\\
+Karin Heutinck (\href{k.j.b.heutinck@saxion.nl}{\textsf{k.j.b.heutinck@saxion.nl}})\\
+Taco Graafsma(\href{t.l.g.p.graafsma@saxion.nl}{\textsf{t.l.g.p.graafsma@saxion.nl}})\\
+Samuel Mok (\href{s.mok@saxion.nl}{\textsf{s.mok@saxion.nl}})\\
+voor de opleiding Chemie van de Saxion Hogeschool ter behoeve van de leerlijn Dataverwerking in het jaar \the\year.
 
 Met dank aan Sonja Scheinhardt voor een deel van het materiaal voor Design of Experiments.
 
-Dit dictaat heeft een CC4-BY-NC licentie (zie hieronder). Dit dictaat is geschreven in de taal \LaTeX\ in de editor \href{https://www.overleaf.com}{Overleaf}. 
+Dit dictaat heeft een CC4-BY-NC licentie (zie hieronder). Dit dictaat is geschreven in de taal \LaTeX\ in de editor Overleaf en is hier beschikbaar: \href{https://www.overleaf.com/read/sgpyzkvsfkpc
+}{overleaf.com}. De broncode is beschikbaar op de volgende GitHub repository: \href{https://github.com/MokSamuel/Studiewijzer-Dataverwerking}{https://github.com/MokSamuel/Studiewijzer-Dataverwerking}
 
 
 \doclicenseThis
@@ -130,8 +136,9 @@ Dit dictaat heeft een CC4-BY-NC licentie (zie hieronder). Dit dictaat is geschre
 \input{datamanagement.tex}
 \input{gegevensbeheer.tex}
 \input{doe.tex}
-\begin{appendices}
 
+\begin{appendices}
+\input{templatedmp.tex}
 \end{appendices}
 
 \end{document}

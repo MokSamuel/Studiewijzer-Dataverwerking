@@ -12,7 +12,7 @@
 \usepackage{tikz} % Package for drawing
 \usepackage{amsmath} %display math
 \usepackage{hyperref} %hyperlinks in text
-\usepackage{listings} %show formatted python code
+\usepackage{listings} %show formatted python/r code
 \usepackage{color} %duh
 \usepackage[T1]{fontenc} %better fonts
 \usepackage[bitstream-charter]{mathdesign} %math-text in text
@@ -41,7 +41,7 @@
 \newcommand\NextYear{%
    \advance\year by 1 \the\year\advance\year by -1}
 
-\definecolor{saxion}{RGB}{0,156,130} %saxion-groen
+\definecolor{saxion}{RGB}{0,150,120} %saxion-groen
 
 %links
 \hypersetup{
@@ -85,9 +85,9 @@
 \lstset{basicstyle = \ttfamily,columns=fullflexible}
 
 %chapter/section title settings
-\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge}[\titlerule]
-\titleformat{\section}{\normalfont\Large}{\thesection.}{16pt}{\Large}
-\titleformat{\subsection}{\normalfont\large}{\thesubsection.}{15pt}{\large}
+\titleformat{\chapter}{\normalfont\huge\color{saxion}}{\thechapter.}{20pt}{\huge}[\titlerule]
+\titleformat{\section}{\normalfont\Large\color{saxion}}{\thesection.}{16pt}{\Large}[\titlerule]
+\titleformat{\subsection}{\normalfont\large\color{saxion}}{\thesubsection.}{15pt}{\large}
 
 %----------------------
 %FRONT PAGE
@@ -111,7 +111,7 @@
 \begin{center}
 {\Large Colofon}\\
 \vspace{15mm}
-\includegraphics[width=0.7\linewidth]{lg_saxion_rgb.png}
+\includegraphics[width=0.7\linewidth]{img/lg_saxion_rgb.png}
 \end{center}
 \vspace{10mm}
 Dit document is opgesteld door:\\

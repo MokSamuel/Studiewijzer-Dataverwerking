@@ -24,25 +24,23 @@ Een datamanagementsplan bestaat uit verschillende aspecten. Hieronder worden de 
 
 De meeste onderdelen spreken voor zich. De technische aspecten zijn voor veel van jullie nog nieuw, dus daar wordt wat extra aandacht aan besteed.
 
-\subsection*{Technisch: opslag van data}
+\subsection*{Opslag van data}
 Als je je bestanden wil opslaan zijn er een boel dingen waar je rekening mee moet houden. Ten eerste moet je weten in welk format je de data verkrijgt. Sommige meetapparaten geven de data in zogenaamde gepatenteerde bestandsformaten. Dit zijn bestanden die je niet zomaar kan openen in andere software. Als je dus je data opslaat op die manier is het mogelijk dat je later deze data niet meer kan openen. Het is dus zaak om te zorgen dat je data wordt opgeslagen op een manier zodat je er altijd bij kan. Bestandsformaten als .csv, .txt, .xlsx, .docx, .zip, zijn open bestandstypes die door erg veel verschillende software geopend kunnen worden. Bestandsformaten als .rar, .psd, .rtf, .wma, zijn gesloten bestandstypes die je alleen met specifieke software kan openen. Vaak is het noodzakelijk om de data van een meetapparaat te exporteren naar een open bestandstype. 
 
 Naast het bestandsformaat is het ook erg handig om een begeleidend document bij de data te plaatsen die uitlegt wat de data precies is, wat de getallen voorstellen, etcetera. Dit wordt ook wel \textit{metadata} genoemd: data die wat zegt over andere data. Denk hierbij bijvoorbeeld aan een .txt bestandje die uitlegt in welke eenheid iedere kolom in een .xlsx bestand is opgeslagen.
 
 Als de data is verzameld en is voorzien van metadata moet het worden opgeslagen. Een gebruikelijke manier is om dit te doen op een USB-stick. Dit is natuurlijk erg fout- en fraudegevoelig: de stick kan kwijtraken of kapotgaan, iedereen met de stick heeft toegang tot de data, er kan maar 1 persoon tegelijkertijd mee werken, etcetera. Dit is dus bijna nooit de goede manier om je data op te slaan.
 
-Tegenwoordig is het bijna altijd standaard om de data op een server van het bedrijf/instelling op te slaan, of in een cloud-opslag zoals dropbox, google drive, of onedrive. Het is vaak zelfs verplicht om dit te doen om te zorgen dat de data ook voor andere onderzoekers beschikbaar en controleerbaar is, en zodat er automatisch back-ups worden gemaakt van het materiaal.
+Tegenwoordig is het bijna altijd standaard om de data op een server van het bedrijf/instelling op te slaan, of in een cloud-opslag zoals Dropbox, Google Drive, of OneDrive. Het is vaak zelfs verplicht om dit te doen om te zorgen dat de data ook voor andere onderzoekers beschikbaar en controleerbaar is, en zodat er automatisch back-ups worden gemaakt van het materiaal.
 
 Hier moet je wel altijd goed nadenken over privacy en toegang. Als je bijvoorbeeld gevoelige informatie wil opslaan wil je niet dat iedere medewerker van je bedrijf daar bij kan, en als je samen wil werken met meerdere instellingen is het soms onmogelijk om dan alles op te slaan op een server van het bedrijf, aangezien niet iedereen daar toegang tot heeft.
 
 In de regel sla je de data altijd op bij de cloud-opslag van je bedrijf, instelling, of school. In ons geval geldt dus dat je alles op gaat slaan op de OneDrive van het Saxion. Hiervoor moet je wel een goede mappen-structuur bedenken om de boel op te slaan: welke indeling wordt er gemaakt, welke bestanden komen erin, welke naamgeving hebben de bestanden, hoe wordt de metadata meegegeven, wie heeft toegang, etcetera. Dit hoort allemaal in je DMP terug te komen. 
 
-
-\newpage
 \subsection*{Opdracht: Uitwerken datamanagementsplan}
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.6\textwidth]{dpm_studenten_infographic.png}
+\includegraphics[width=0.6\textwidth]{img/dpm_studenten_infographic.png}
 \caption{\label{fig:dmpinfo} \small Infographic voor het opstellen van een DMP. Gebaseerd op een werk van de Universiteitsbibliotheek Nijmegen op \href{http://ru.nl.libguides.com}{\textsf{http://ru.nl.libguides.com}}}
 \end{center}
 \end{figure}
@@ -71,8 +69,11 @@ De data wordt opgeslagen op de interne servers van het RIKILT. Hier kunnen allee
 
 Er wordt verwacht dat de fipronilconcentratie onder de \SI[per-mode=symbol]{5}{\micro\gram\per\kilo\gram} ligt (maximaal toegestane waarde). Als de waardes hierboven liggen zal er direct melding van worden gemaakt bij de voedsel- en warenautoriteit in verband met een mogelijk gevaar voor de volksgezondheid. Bedrijven kunnen tot 5 jaar na overschrijding van maximale fipronilgehaltes een boete krijgen. 
 
-\textbf{Opdracht:} vul het sjabloon voor de DMP in voor deze case (zie appendix \ref{ap:dmp}), en maak een voorbeeldmetadatabestand en mappenstructuur. Bewaar het gemaakte werk.
+\color{saxion}\textbf{Opdracht week 3: }\color{black} vul het sjabloon voor de DMP in voor deze case (zie appendix \ref{ap:dmp} of gebruik een ander sjabloon met een zelfde strekking), maak ook een voorbeeldmetadatabestand en mappenstructuur. Bewaar het gemaakte werk voor de eindopdracht.
 
+\newpage
 \section{Ordenen en opschonen van gegevens}
 Als de gegevens uiteindelijk allemaal zijn verkregen is vaak de tweede stap om de data op te schonen, samen te voegen, en klaar te maken voor (semi-)langdurige opslag. Soms is dit heel simpel om te doen, maar vaak is dit een langduriger proces waarbij data uit verschillen bronnen en formats samengevoegd moeten worden tot een overzichtelijk geheel wat verder verwerkt kan worden.
 Over het algemeen wordt hiervoor Excel gebruikt als softwarepakket. Met Excel kan je op veel verschillende manieren data importeren, inlezen, combineren, en weer opslaan in allerlei verschillende formats die door andere software kan worden ingelezen. In deze opleiding gebruiken we bijvoorbeeld R, SPSS, en Python om data verder te verwerken.
+
+\color{saxion}\textbf{Opdracht week 4: }\color{black} Gebruik de kennis die je hebt vergaard de afgelopen 2 weken om een DMP te schrijven (en uit te voeren!) voor het project Chemical Fingerprinting. De data die je verzamelt voor het project ga je volgend kwartiel gebruiken voor een automatiseringsopdracht, dus het is van belang dat je de data op een goede manier opslaat!

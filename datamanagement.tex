@@ -76,4 +76,68 @@ Er wordt verwacht dat de fipronilconcentratie onder de \SI[per-mode=symbol]{5}{\
 Als de gegevens uiteindelijk allemaal zijn verkregen is vaak de tweede stap om de data op te schonen, samen te voegen, en klaar te maken voor (semi-)langdurige opslag. Soms is dit heel simpel om te doen, maar vaak is dit een langduriger proces waarbij data uit verschillen bronnen en formats samengevoegd moeten worden tot een overzichtelijk geheel wat verder verwerkt kan worden.
 Over het algemeen wordt hiervoor Excel gebruikt als softwarepakket. Met Excel kan je op veel verschillende manieren data importeren, inlezen, combineren, en weer opslaan in allerlei verschillende formats die door andere software kan worden ingelezen. In deze opleiding gebruiken we bijvoorbeeld R, SPSS, en Python om data verder te verwerken.
 
-\color{saxion}\textbf{Opdracht week 4: }\color{black} Gebruik de kennis die je hebt vergaard de afgelopen 2 weken om een DMP te schrijven (en uit te voeren!) voor het project Chemical Fingerprinting. De data die je verzamelt voor het project ga je volgend kwartiel gebruiken voor een automatiseringsopdracht, dus het is van belang dat je de data op een goede manier opslaat!
+\subsection{Data importeren}
+
+De data die je uit software verkrijgt kan in veel verschillende vormen worden aangeboden. Het kunnen .txt bestanden zijn, of .csv, of nog anders. Het handigste is om de data niet op te slaan in allerlei losse vormen, maar ze om te zetten naar 1 type bestand. Over het algemeen wordt data opgeslagen in .csv of .xlsx bestanden. Dit zijn namelijk bestandtypes die door de meeste software kan worden ingelezen voor verder gebruik.
+
+.csv staat voor comma-separated-values, oftwel door komma gescheiden waardes. Dit zijn simpele bestanden in de vorm van text waarbij de data in kolommen staat, gescheiden door komma's (of soms tabs of spaties, maar dan is het eigenlijk geen .csv meer). Hieronder zie je een screenshot van een .csv bestand die geopend is in google sheets en in kladblok:
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{img/csv_ex.png}
+\end{center}
+\end{figure}
+
+Zoals je ziet kan google sheets (of excel) de data inlezen en laten zien in rijen en kolommen, en in klablok zie je per regel de waardes gescheiden van elkaar door komma's. Dit is exact dezelfde data, alleen op verschillende manieren weergegeven. 
+
+Als je een .csv bestand opent in bepaalde software kan het zijn dat het direct wordt herkend en de data juist wordt weergegeven, maar soms is het bestand net iets anders opgemaakt, of herkent het programma het verkeerd. Daarom is het vaak nodig om de data te importeren in plaats van te openen. Hieronder wordt uitgelegd hoe je dat in Excel moet doen. Zodra je de data hebt geimporteerd kan je het bewerken, en opslaan als fatsoenlijk .csv bestand zodat je later er mee verder kan werken.
+
+Over het algemeen kan je in het tabblad "Data" van Excel alle opties vinden voor het importeren van gegevens. In dit tabblad vind je (afhankelijk van je versie) verschillende manieren om data te importeren. Als je data vanuit een bestand wil inlezen selecteer je de optie "Get external data -> from text"
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{img/excelimport.png}
+\end{center}
+\end{figure}
+
+Selecteer nu het bestand wat je wil importeren, en daarna kom je in de \textit{Import Wizard} terecht. Hierbij helpt excel je de juiste opties te kiezen om de data te importeren. In het eerste scherm moet je kiezen of de data is gescheiden door tekens (bijvoorbeeld komma's, punten, puntkomma's, etc) of door spaties of tabs. In het scherm zie je onderin een voorbeeld van het bestand wat je wil importeren, kijk daar naar en kies de juiste optie. In het voorbeeld hieronder is de data gescheiden met puntkomma's, dus we kiezen de optie \textit{Delimited} (gescheiden door tekens, niet door spaties). Als je data ook een titel-regel heeft moet je dat ook in dit scherm aanvinken. 
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{img/excelimport2.png}
+\end{center}
+\end{figure}
+
+Het kan ook zijn dat de data is gescheiden door komma's, maar de data ook zelf komma's bevat. Dan wordt er vaak gebruik gemaakt van aanhalingstekens om de data per cel duidelijk te krijgen, bijvoorbeeld in deze reeks waar met stapjes van een half wordt opgeteld:
+\begin{verbatim}
+    "0,0","0,5","1,0","1,5","2,0"
+\end{verbatim}
+
+In het volgende scherm moet je aangeven met welk teken de data is gescheiden. In dit geval zijn het puntkomma's, dus we vinken dat aan en we zien direct in het voorbeeld onderaan dat hij een streep zet tussen de twee kolommen. Als je deze streep niet ziet heeft Excel de scheiding niet goed herkend.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{img/excelimport3.png}
+\end{center}
+\end{figure}
+
+In het laatste scherm kan je kiezen wat voor type data het is: een getal, tekst, datums, etcetera. Dit is vaak erg belangrijk: Excel weet niet of een punt of een komma wordt gebruikt voor getallen, dat moet je bij het knopje "advanced" aangeven. Dit is iets wat vaak wordt vergeten en veel problemen oplevert! In NL wordt er een komma gebruikt als decimaal scheidingsteken, in de VS vaak een punt. Let hier dus goed op.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{img/excelimport4.png}
+\end{center}
+\end{figure}
+
+Vervolgens druk je op finish, kies je waar je de data wil hebben, en klaar. Controleer dat alle data goed is overgekomen en je hebt nu alles in je excel-bestand staan!
+
+\textbf{Opdracht (in de les):} ga naar \href{https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html}{\textsf{https://people.sc.fsu.edu/$\sim$jburkardt/data/csv/csv.html}}, download minimaal 3 .csv bestanden en importeer deze in Excel. Sla op als .xlsx bestand met 3 tabbladen die de data bevatten uit de drie .csv's.
+
+\subsection{Data bewerken en rangschikken in Excel}
+
+
+
+TODO: Excelskills, index en match, tabellen maken, etc
+
+\color{saxion}\textbf{Opdracht week 4: }\color{black} Gebruik de kennis die je hebt vergaard de afgelopen 2 weken om een DMP te schrijven (en uit te voeren!) voor het project Chemical Fingerprinting. De data die je verzamelt voor het project ga je volgend kwartiel gebruiken voor een automatiseringsopdracht, dus het is van belang dat je de data op een goede manier opslaat! Neem dus ook in je plan op hoe je data van de meetapparatuur gaat inlezen, omzetten en op gaat slaan. 

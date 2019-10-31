@@ -7,7 +7,7 @@ Of je nou analyses uitvoert, polymeren onderzoekt, nanotechnologisch bezig bent:
 
 Een van de belangrijkste dingen hierbij is dat data systematisch wordt opgeslagen in een vorm die ook later nog bruikbaar is. De eerste les van dit onderdeel gaat hierover: welke technieken zijn er om je gegevens te beheren?
 
-In dit onderdeel houden we het bij relatief simpele voorbeelden: gegevens die overzichtelijk in excel-sheets passen en die door 1 persoon worden beheerd en gebruikt. Voor meer ingewikkelde gevallen heb je vaak databases nodig, om bijvoorbeeld grote hoeveelheden data te beheren of om meerdere personen op verschillende manieren toegang te kunnen verlenen. Databases komen aan bod in hoofdstuk~\ref{chap:gegevensbeheer}: Gegevensbeheer.
+In dit onderdeel houden we het bij relatief simpele voorbeelden: gegevens die overzichtelijk in Excel-sheets passen en die door 1 persoon worden beheerd en gebruikt. Voor meer ingewikkelde gevallen heb je vaak databases nodig, om bijvoorbeeld grote hoeveelheden data te beheren of om meerdere personen op verschillende manieren toegang te kunnen verlenen. Databases komen aan bod in hoofdstuk~\ref{chap:gegevensbeheer}: Gegevensbeheer.
 
 Voor het opslaan van data maak je van tevoren een plan, die je eventueel aanpast indien nodig. Het maken van een datamanagentsplan (DMP) is verplicht in veel sectoren: onderzoekers moeten bijvoorbeeld zo'n plan aanleveren bij de aanvraag van onderzoeksgeld. Er zijn een heleboel manieren om een dergelijk plan te maken. In dit hoofdstuk wordt er 1 manier doorgewerkt. Het is de bedoeling dat jullie ook een DMP maken voor jullie project Chemical Fingerprinting (en later ook voor Urban Mining).
 
@@ -88,7 +88,7 @@ De data die je uit software verkrijgt kan in veel verschillende vormen worden aa
 \end{center}
 \end{figure}
 
-Zoals je ziet kan google sheets (of excel) de data inlezen en laten zien in rijen en kolommen, en in klablok zie je per regel de waardes gescheiden van elkaar door komma's. Dit is exact dezelfde data, alleen op verschillende manieren weergegeven. 
+Zoals je ziet kan google sheets (of Excel) de data inlezen en laten zien in rijen en kolommen, en in klablok zie je per regel de waardes gescheiden van elkaar door komma's. Dit is exact dezelfde data, alleen op verschillende manieren weergegeven. 
 
 Als je een .csv bestand opent in bepaalde software kan het zijn dat het direct wordt herkend en de data juist wordt weergegeven, maar soms is het bestand net iets anders opgemaakt, of herkent het programma het verkeerd. Daarom is het vaak nodig om de data te importeren in plaats van te openen. Hieronder wordt uitgelegd hoe je dat in Excel moet doen. Zodra je de data hebt geimporteerd kan je het bewerken, en opslaan als fatsoenlijk .csv bestand zodat je later er mee verder kan werken.
 
@@ -96,16 +96,16 @@ Over het algemeen kan je in het tabblad "Data" van Excel alle opties vinden voor
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.5\textwidth]{img/excelimport.png}
+\includegraphics[width=0.5\textwidth]{img/Excelimport.png}
 \end{center}
 \end{figure}
 
-Selecteer nu het bestand wat je wil importeren, en daarna kom je in de \textit{Import Wizard} terecht. Hierbij helpt excel je de juiste opties te kiezen om de data te importeren. In het eerste scherm moet je kiezen of de data is gescheiden door tekens (bijvoorbeeld komma's, punten, puntkomma's, etc) of door spaties of tabs. In het scherm zie je onderin een voorbeeld van het bestand wat je wil importeren, kijk daar naar en kies de juiste optie. In het voorbeeld hieronder is de data gescheiden met puntkomma's, dus we kiezen de optie \textit{Delimited} (gescheiden door tekens, niet door spaties). Als je data ook een titel-regel heeft moet je dat ook in dit scherm aanvinken. 
+Selecteer nu het bestand wat je wil importeren, en daarna kom je in de \textit{Import Wizard} terecht. Hierbij helpt Excel je de juiste opties te kiezen om de data te importeren. In het eerste scherm moet je kiezen of de data is gescheiden door tekens (bijvoorbeeld komma's, punten, puntkomma's, etc) of door spaties of tabs. In het scherm zie je onderin een voorbeeld van het bestand wat je wil importeren, kijk daar naar en kies de juiste optie. In het voorbeeld hieronder is de data gescheiden met puntkomma's, dus we kiezen de optie \textit{Delimited} (gescheiden door tekens, niet door spaties). Als je data ook een titel-regel heeft moet je dat ook in dit scherm aanvinken. 
 
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.5\textwidth]{img/excelimport2.png}
+\includegraphics[width=0.5\textwidth]{img/Excelimport2.png}
 \end{center}
 \end{figure}
 
@@ -118,7 +118,7 @@ In het volgende scherm moet je aangeven met welk teken de data is gescheiden. In
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.5\textwidth]{img/excelimport3.png}
+\includegraphics[width=0.5\textwidth]{img/Excelimport3.png}
 \end{center}
 \end{figure}
 
@@ -126,18 +126,140 @@ In het laatste scherm kan je kiezen wat voor type data het is: een getal, tekst,
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=0.5\textwidth]{img/excelimport4.png}
+\includegraphics[width=0.5\textwidth]{img/Excelimport4.png}
 \end{center}
 \end{figure}
 
-Vervolgens druk je op finish, kies je waar je de data wil hebben, en klaar. Controleer dat alle data goed is overgekomen en je hebt nu alles in je excel-bestand staan!
+Vervolgens druk je op finish, kies je waar je de data wil hebben, en klaar. Controleer dat alle data goed is overgekomen en je hebt nu alles in je Excel-bestand staan!
 
 \textbf{Opdracht (in de les):} ga naar \href{https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html}{\textsf{https://people.sc.fsu.edu/$\sim$jburkardt/data/csv/csv.html}}, download minimaal 3 .csv bestanden en importeer deze in Excel. Sla op als .xlsx bestand met 3 tabbladen die de data bevatten uit de drie .csv's.
 
 \subsection{Data bewerken en rangschikken in Excel}
+Zodra je de data netjes in een .xlsx of .csv bestand hebt kan je het opslaan, maar als je er verder mee wil werken moet er vaak nog aan gesleuteld worden: slechte waardes moeten eruit, opmaak bij de tabellen, eventueel grafieken, samenvoegen van datasets, etcetera. In dit deel worden er aan de hand van een voorbeeld verschillende bewerkingen in Excel tentoongesteld.
+
+In dit voorbeeld gebruiken we een dataset van wijn-gegevens. Deze dataset bestaat uit twee bestanden, met iedere meerdere kolommen, waarbij iedere wijn is doorgemeten op verschillende wijzes in veelvoud. De details worden achterwege gelaten, die zijn niet relevant voor het voorbeeld. 
+
+\textbf{Tabel maken:}\\
+Over het algemeen hou je de data zo kaal mogelijk, zodat je het makkelijk kan importeren en exporteren. Als je de data netjes wil presenteren, of je wil het wat overzichtelijker maken: Excel kan ook gebruikt worden om nette tabellen te maken.
+In eerste instantie ziet de dataset er zo uit (.csv bestand):
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{img/wijn1.png}
+\end{center}
+\end{figure}
+
+Het is vaak handig om een titelregel toe te voegen. Dit doe je door rechtermuisklik -> insert te klikken op de bovenste regel.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{img/wijn2.png}
+\end{center}
+\end{figure}
+
+Als je het netjes wil opmaken en bruikbaar wil maken voor mensen maak je de datasheet op als tabel. Selecteer de data en druk (rechtsboven) op de knop "Format as Table". Kies een kleur en druk op OK om de tabel te maken.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{img/wijn3.png}
+\end{center}
+\end{figure}
+
+Je ziet nu ook pijltjes bij de vakjes op de bovenste regel: dit kan je gebruiken om bv te sorteren en zoeken in de tabel. Dit kan erg handig zijn! Klik hier een keer rond en bekijk de opties.
+
+Sla het bestand nu opnieuw op als .xlsx bestand. Als het een .csv bestand blijft kan je veel opties niet gebruiken, en je wil je .csv bestand kaal houden als ruwe data. 
+
+\textbf{Berekeningen:}\\
+In Excel kan je uiteraard van alles berekenen. Er zijn een heleboel functies beschikbaar om dat voor je te doen. De basis wordt hier uitgelegd, en als je meer of andere bewerkingen wil doen moet je zelf zoeken op het internet.
+
+Om een berekening uit te voeren typ je in een lege cel een = teken, met daarachter je berekening. Bijvoorbeeld als je cel A2 en B2 bij elkaar wil optellen:
+
+\begin{verbatim}
+    =A2+B2
+\end{verbatim}
+
+Naast simpele operaties zijn er ook functies die je kan uitvoeren. Om een of andere reden heeft Microsoft besloten dat deze functies in verschillende talen anders heten, wat erg storend is. In dit dictaat wordt het in het Engels weergegeven, maar als je je computer in het Nederlands gebruikt moet je dus andere functies intypen voor hetzelfde effect. Online kan je de 'vertalingen' vinden. 
+
+Een voorbeeld van een functie is bijvoorbeeld AVERAGE die het gemiddelde uitrekent van een reeks, bijvoorbeeld:
+\begin{verbatim}
+    =AVERAGE(A1:A24)
+    =AVERAGE(A:A)
+    =AVERAGE(A1:D30)
+\end{verbatim}
+Waarbij de eerste regel het gemiddelde van cel A1 t/m A24 uitrekent, de tweede regel het gemiddelde van alle A-cellen, en de laatste regel A1-30, B1-30, C1-30 en D1-30 allemaal uitmiddelt. 
+
+Als je een functie hebt ingevoerd kan je die ook doortrekken naar meerdere cellen, als je bijvoorbeeld het gemiddelde van iedere rij wil weten. Excel past vaak zelf de cellen aan zodat er een logisch antwoord uitkomt. Als je een functie wil kopieren maar je wil dat de verwezen cellen niet veranderen kan je het dollarteken gebruiken zoals hier:
+\begin{verbatim}
+    =AVERAGE($D4)
+    =AVERAGE(D$4)
+    =AVERAGE($D$4)
+\end{verbatim}
+Waarbij in de eerste regel de letter vast staat, in de tweede regel het cijfer, en in de derde regel beiden.
+
+Er zijn uiteraard nog veel meer functies, en ook veel complexere functies. Over het algemeen adviseren we het meer ingewikkelde werk niet in Excel te doen maar in software als R of Python. Dat komt volgend kwartiel onder andere aan bod. Hieronder een paar functies die handig zijn om te kennen. Probeer ze zelf ook uit in een datasheet van jezelf!
+
+\begin{verbatim}
+    =COUNTIF(A1:A30, ">5")
+    telt tussen A1 en A30 hoeveel vakjes boven de 5 zijn
+    
+    =AVERAGEIF(A1:A30, ">3")
+    =SUMIF(A1:A30, "<1")
+    zelfde maar met optellen/gemiddelde
+    
+    =MAX(A1:A30)
+    =MIN(A1:A30)
+    geeft de hoogste/laagste waarde in gebied
+    
+    =IF(A1>5,"Hoog","Laag")
+    Checkt voorwaarde (a1>5), als dat is dan komt "hoog"
+    in het vakje, anders komt "laag" in het vakje.
+\end{verbatim}
+
+Je kan deze functies ook combineren, uitbreiden, etcetera. Met een beetje hulp van Google en proberen kom je vaak een heel eind. 
+
+\textbf{Samenvoegen:}\\
+Het komt ook vaak voor dat je data verspreid over meerdere datasets staat, maar dat je dat graag in 1 overzicht wil hebben. Hier is natuurlijk ook een functie voor. In principe zijn er 3 manieren om dit te doen: Met de hand (vaak te veel werk en onhandig), met VLOOKUP, of met INDEX en MATCH. VLOOKUP wordt hier niet behandeld omdat dat traag en niet flexibel is, dus we gebruiken hier eigenlijk altijd INDEX en MATCH voor. Als je Excel in het Nederlands gebruikt is het geen INDEX en MATCH, maar INDEX en VERGELIJKEN. Aan de hand van een voorbeeld worden deze functies hier uitgelegd.
 
 
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{img/index1.png} 
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{img/index2.png}
+    \end{minipage}
+\end{figure}
 
-TODO: Excelskills, index en match, tabellen maken, etc
+In dit voorbeeld worden samples van verschillende producenten doorgemeten. De analist krijgt een sample met een nummer en meet de concentratie. Later wordt er opgezocht van welke producent welke sample is. We hebben nu dus een Excel-bestand met twee tabbladen: eentje met de gemeten concentraties en eentje met de producent per sample.
 
-\color{saxion}\textbf{Opdracht week 4: }\color{black} Gebruik de kennis die je hebt vergaard de afgelopen 2 weken om een DMP te schrijven (en uit te voeren!) voor het project Chemical Fingerprinting. De data die je verzamelt voor het project ga je volgend kwartiel gebruiken voor een automatiseringsopdracht, dus het is van belang dat je de data op een goede manier opslaat! Neem dus ook in je plan op hoe je data van de meetapparatuur gaat inlezen, omzetten en op gaat slaan. 
+We willen nu graag in tabblad 1 (concentraties) een nieuwe kolom toevoegen waar de producent van de sample staat die erbij hoort. Dit doen we met index en match. In de derde kolom (C) vullen we de volgende code in op C2 en trekken dit door naar de rest van de tabel:
+\begin{verbatim}
+=INDEX(Producenten!$B$2:$B$11,MATCH(Concentraties!A2,Producenten!$A$2:$A$11,0))
+\end{verbatim}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{img/index3.png}
+\end{center}
+\end{figure}
+
+Zoals je ziet staan nu de juiste namen naast de samples. Er wordt nu stuk voor stuk uitgelegd wat je waar in moet vullen. Er zijn 4 dingen om in te vullen in de functie:
+
+\begin{verbatim}
+    =INDEX(bron, MATCH(item, lijst, 0))
+\end{verbatim}
+Van links naar rechts gaan we langs de losse parameters. "bron" is de kolom waar de gegevens instaan die je uiteindelijk wil hebben. In dit geval willen we de naam van de producent hebben, dus geven we aan waar we \textit{alle} namen van producenten kunnen vinden: in kolom B van tabblad Producenten. Dat geven we aan in Excel met \textsf{Producenten!B2:B11}, en er zijn dollartekens toegevoegd om het constant te houden. 
+
+De volgende parameter die we moeten opgeven is \textit{item}. Hier vullen we in welk item we opzoeken: dit moet dus iets zijn wat in beide tabbladen aanwezig is. In dit geval is dat het samplenummer. We gebruiken dus het samplenummer van het tabblad concentraties: dat is het sample wat bij die regel hoort en die vinden we in kolom A (en in dit geval op regel 2) op het tabblad Concentraties: Concentraties!A2.
+
+Nu moeten we aangeven waar de lijst met samplenummers is in het tabblad producenten: dat is ook kolom A. We geven dus aan Producenten!A2:A11. 
+
+Tot slot moet je nog een 0 toevoegen. Dit zorgt ervoor dat Excel alleen exacte matches teruggeeft. Dit wil je eigenlijk altijd. 
+
+Als je meer voorbeelden wil kan je die online vinden, bijvoorbeeld hier:\\
+\href{https://www.deskbright.com/Excel/using-index-match/}{\textsf{https://www.deskbright.com/Excel/using-index-match/}}. 
+
+Het is bijna zeker dat je deze functie nodig hebt bij het project Chemical Fingerprinting, aangezien je dezelfde sample gaat meten met verschillende apparaten. Hou de ruwe data apart, en gebruik INDEX en MATCH om een overzichtsbestand te maken.
+
+\color{saxion}\textbf{Opdracht week 4: }\color{black} Gebruik de kennis die je hebt vergaard de afgelopen 2 weken om een DMP te schrijven (en uit te voeren!) voor het project Chemical Fingerprinting. De data die je verzamelt voor het project ga je volgend kwartiel gebruiken voor een automatiseringsopdracht, dus het is van belang dat je de data op een goede manier opslaat! Neem dus ook in je plan op hoe je data van de meetapparatuur gaat inlezen, omzetten en op gaat slaan. Leg dus ook uit welke Excel-bewerkingen je gaat doen om je data te rangschikken, presenteren, enzovoorts. 

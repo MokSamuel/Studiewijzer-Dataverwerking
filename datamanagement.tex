@@ -139,7 +139,7 @@ Zodra je de data netjes in een .xlsx of .csv bestand hebt kan je het opslaan, ma
 
 In dit voorbeeld gebruiken we een dataset van wijn-gegevens. Deze dataset bestaat uit twee bestanden, met iedere meerdere kolommen, waarbij iedere wijn is doorgemeten op verschillende wijzes in veelvoud. De details worden achterwege gelaten, die zijn niet relevant voor het voorbeeld. 
 
-\textbf{Tabel maken:}\\
+\subsubsection*{Tabel maken}
 Over het algemeen hou je de data zo kaal mogelijk, zodat je het makkelijk kan importeren en exporteren. Als je de data netjes wil presenteren, of je wil het wat overzichtelijker maken: Excel kan ook gebruikt worden om nette tabellen te maken.
 In eerste instantie ziet de dataset er zo uit (.csv bestand):
 
@@ -168,7 +168,7 @@ Je ziet nu ook pijltjes bij de vakjes op de bovenste regel: dit kan je gebruiken
 
 Sla het bestand nu opnieuw op als .xlsx bestand. Als het een .csv bestand blijft kan je veel opties niet gebruiken, en je wil je .csv bestand kaal houden als ruwe data. 
 
-\textbf{Berekeningen:}\\
+\subsubsection*{Berekeningen}
 In Excel kan je uiteraard van alles berekenen. Er zijn een heleboel functies beschikbaar om dat voor je te doen. De basis wordt hier uitgelegd, en als je meer of andere bewerkingen wil doen moet je zelf zoeken op het internet.
 
 Om een berekening uit te voeren typ je in een lege cel een = teken, met daarachter je berekening. Bijvoorbeeld als je cel A2 en B2 bij elkaar wil optellen:
@@ -216,7 +216,7 @@ Er zijn uiteraard nog veel meer functies, en ook veel complexere functies. Over 
 
 Je kan deze functies ook combineren, uitbreiden, etcetera. Met een beetje hulp van Google en proberen kom je vaak een heel eind. 
 
-\textbf{Samenvoegen:}\\
+\subsubsection*{Samenvoegen}
 Het komt ook vaak voor dat je data verspreid over meerdere datasets staat, maar dat je dat graag in 1 overzicht wil hebben. Hier is natuurlijk ook een functie voor. In principe zijn er 3 manieren om dit te doen: Met de hand (vaak te veel werk en onhandig), met VLOOKUP, of met INDEX en MATCH. VLOOKUP wordt hier niet behandeld omdat dat traag en niet flexibel is, dus we gebruiken hier eigenlijk altijd INDEX en MATCH voor. Als je Excel in het Nederlands gebruikt is het geen INDEX en MATCH, maar INDEX en VERGELIJKEN. Aan de hand van een voorbeeld worden deze functies hier uitgelegd.
 
 
@@ -262,4 +262,22 @@ Als je meer voorbeelden wil kan je die online vinden, bijvoorbeeld hier:\\
 
 Het is bijna zeker dat je deze functie nodig hebt bij het project Chemical Fingerprinting, aangezien je dezelfde sample gaat meten met verschillende apparaten. Hou de ruwe data apart, en gebruik INDEX en MATCH om een overzichtsbestand te maken.
 
-\color{saxion}\textbf{Opdracht week 4: }\color{black} Gebruik de kennis die je hebt vergaard de afgelopen 2 weken om een DMP te schrijven (en uit te voeren!) voor het project Chemical Fingerprinting. De data die je verzamelt voor het project ga je volgend kwartiel gebruiken voor een automatiseringsopdracht, dus het is van belang dat je de data op een goede manier opslaat! Neem dus ook in je plan op hoe je data van de meetapparatuur gaat inlezen, omzetten en op gaat slaan. Leg dus ook uit welke Excel-bewerkingen je gaat doen om je data te rangschikken, presenteren, enzovoorts. 
+\color{saxion}\textbf{Oefenopdracht: }\color{black} Ga naar Blackboard en download Pottery.csv en Pottery2.csv. Gebruik Excel om de data samen te voegen op 1 pagina (met index en match) en een nette tabel te maken van de data met op 1 tabblad:
+\begin{itemize}
+    \item Geformatteerd als tabel
+    \item Een extra kolom met daarin het gemiddelde van iedere regel
+    \item Een extra regel met daarin de hoogste waarde van iedere kolom
+    \item Een los vakje met daarin de hoogste Al-waarde van de hele tabel, met daarnaast het nummer van het sample wat daarbij hoort
+    \item Een extra kolom die aangeeft per regel of er waardes onder de 0.05 in de regel zit met "Ja" of "Nee". Bonus: gebruik "conditional formatting" om alle vakjes met Ja rood te kleuren.
+    \item Een los vakje met daarin het aantal meetwaardes boven de 1
+    \item Een los vakje met daarin het aantal samples
+\end{itemize}
+
+Het excelbestand zou er uiteindelijk ruwweg zo uit moeten zien:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{img/xlsx.png}
+\end{center}
+\end{figure}
+\\
+\color{saxion}\textbf{Eindopdracht week 4: }\color{black} Gebruik de kennis die je hebt vergaard de afgelopen 2 weken om een DMP te schrijven (en uit te voeren!) voor het project Chemical Fingerprinting. De data die je verzamelt voor het project ga je volgend kwartiel gebruiken voor een automatiseringsopdracht, dus het is van belang dat je de data op een goede manier opslaat! Neem dus ook in je plan op hoe je data van de meetapparatuur gaat inlezen, omzetten en op gaat slaan. Leg dus ook uit welke Excel-bewerkingen je gaat doen om je data te rangschikken, presenteren, enzovoorts. 

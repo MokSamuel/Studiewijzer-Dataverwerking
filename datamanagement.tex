@@ -76,6 +76,8 @@ Er wordt verwacht dat de fipronilconcentratie onder de \SI[per-mode=symbol]{5}{\
 Als de gegevens uiteindelijk allemaal zijn verkregen is vaak de tweede stap om de data op te schonen, samen te voegen, en klaar te maken voor (semi-)langdurige opslag. Soms is dit heel simpel om te doen, maar vaak is dit een langduriger proces waarbij data uit verschillen bronnen en formats samengevoegd moeten worden tot een overzichtelijk geheel wat verder verwerkt kan worden.
 Over het algemeen wordt hiervoor Excel gebruikt als softwarepakket. Met Excel kan je op veel verschillende manieren data importeren, inlezen, combineren, en weer opslaan in allerlei verschillende formats die door andere software kan worden ingelezen. In deze opleiding gebruiken we bijvoorbeeld R, SPSS, en Python om data verder te verwerken.
 
+Let op: de screenshots van Excel die worden gegeven kunnen compleet verschillen van de versie van Excel die jij gebruikt. De functies zitten echter vaak op dezelfde plaats, maar werken soms wel net iets anders. Als je er niet uit komt: gebruik Google om handleidingen te zoeken. 
+
 \subsection{Data importeren}
 
 De data die je uit software verkrijgt kan in veel verschillende vormen worden aangeboden. Het kunnen .txt bestanden zijn, of .csv, of nog anders. Het handigste is om de data niet op te slaan in allerlei losse vormen, maar ze om te zetten naar 1 type bestand. Over het algemeen wordt data opgeslagen in .csv of .xlsx bestanden. Dit zijn namelijk bestandtypes die door de meeste software kan worden ingelezen voor verder gebruik.
@@ -132,7 +134,7 @@ In het laatste scherm kan je kiezen wat voor type data het is: een getal, tekst,
 
 Vervolgens druk je op finish, kies je waar je de data wil hebben, en klaar. Controleer dat alle data goed is overgekomen en je hebt nu alles in je Excel-bestand staan!
 
-\textbf{Opdracht (in de les):} ga naar \href{https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html}{\textsf{https://people.sc.fsu.edu/$\sim$jburkardt/data/csv/csv.html}}, download minimaal 3 .csv bestanden en importeer deze in Excel. Sla op als .xlsx bestand met 3 tabbladen die de data bevatten uit de drie .csv's.
+\color{saxion}\textbf{Oefenopdracht: }\color{black} ga naar \href{https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html}{\textsf{https://people.sc.fsu.edu/$\sim$jburkardt/data/csv/csv.html}}, download minimaal 3 .csv bestanden en importeer deze in Excel. Sla op als .xlsx bestand met 3 tabbladen die de data bevatten uit de drie .csv's.
 
 \subsection{Data bewerken en rangschikken in Excel}
 Zodra je de data netjes in een .xlsx of .csv bestand hebt kan je het opslaan, maar als je er verder mee wil werken moet er vaak nog aan gesleuteld worden: slechte waardes moeten eruit, opmaak bij de tabellen, eventueel grafieken, samenvoegen van datasets, etcetera. In dit deel worden er aan de hand van een voorbeeld verschillende bewerkingen in Excel tentoongesteld.
@@ -166,7 +168,20 @@ Als je het netjes wil opmaken en bruikbaar wil maken voor mensen maak je de data
 
 Je ziet nu ook pijltjes bij de vakjes op de bovenste regel: dit kan je gebruiken om bv te sorteren en zoeken in de tabel. Dit kan erg handig zijn! Klik hier een keer rond en bekijk de opties.
 
-Sla het bestand nu opnieuw op als .xlsx bestand. Als het een .csv bestand blijft kan je veel opties niet gebruiken, en je wil je .csv bestand kaal houden als ruwe data. 
+Er is nog een ander voordeel om je data als tabel in te delen: het verwijzen naar data in formules gaat een stuk eenvoudiger met tabellen ten opzichte van 'kale' data. Als je bijvoorbeeld naar een kolom met data wil verwijzen gebruik je normaal in excel iets als dit:
+\begin{verbatim}
+    C1:C14
+\end{verbatim}
+
+Als je een tabel hebt met titels, zoals in het voorbeeld de kolom As van tabel Wijn kan je ook zo verwijzen:
+
+\begin{verbatim}
+    Wijn[As]
+\end{verbatim}
+
+Dat is een stuk beter leesbaar, en als je meer regels aan je tabel toevoegt hoef je de verwijzing niet aan te passen. Bij het gebruik van Tabellen zal Excel automatisch de meest handige manier van verwijzen gebruiken.
+
+Sla het bestand uiteindelijk opnieuw op als .xlsx bestand. Als het een .csv bestand blijft kan je veel opties niet gebruiken, en je wil je .csv bestand kaal houden als ruwe data. 
 
 \subsubsection*{Berekeningen}
 In Excel kan je uiteraard van alles berekenen. Er zijn een heleboel functies beschikbaar om dat voor je te doen. De basis wordt hier uitgelegd, en als je meer of andere bewerkingen wil doen moet je zelf zoeken op het internet.

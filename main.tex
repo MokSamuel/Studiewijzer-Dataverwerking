@@ -5,6 +5,7 @@
 %PACKAGES
 %-----------------------
 
+
 \usepackage[DIV=15,headinclude=true,footinclude=false]{typearea} %better layout
 \usepackage{fullpage} % Package to use full page
 \usepackage[table,xcdraw,dvipsnames]{xcolor} %meer kleurtjes
@@ -17,6 +18,7 @@
 \usepackage[T1]{fontenc} %better fonts
 \usepackage[bitstream-charter]{mathdesign} %math-text in text
 \usepackage{ccicons} %creative commons license stuff
+\usepackage[ddmmyyyy,hhmmss]{datetime}
 
 \usepackage[page]{appendix} %appendix usage
 \usepackage{fancyvrb} %for verbatim usage; no longer used in this document?
@@ -25,6 +27,9 @@
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype} %beter fonts
 \usepackage{pdfpages} %insert pdfs
 \usepackage{siunitx}
+\usepackage{fancyhdr}
+\usepackage{background}
+\usepackage{lastpage}
 
 \usepackage[type={CC},modifier={by-nc},version={4.0}]{doclicense}
 
@@ -89,13 +94,20 @@
 \titleformat{\section}{\normalfont\Large\color{saxion}}{\thesection.}{16pt}{\Large}[\titlerule]
 \titleformat{\subsection}{\normalfont\large\color{saxion}}{\thesubsection.}{15pt}{\large}
 \titleformat{\subsubsection}{\normalfont\color{saxion}}{\thesubsubsection.}{12pt}{\normalsize}
+
+\backgroundsetup{contents={}}
+
+ 
 %----------------------
-%FRONT PAGE
+%FRONT PAGE - not used
 %----------------------
 
-\title{Dataverwerking \\ Studiewijzer en Dictaat }
-\author{Opleiding Chemie, Saxion Deventer en Enschede}
-\date{Leerjaar 2, kwartiel 2, studiejaar \the\year/\NextYear{}}
+
+
+
+%\title{Dataverwerking \\ Studiewijzer en Dictaat }
+%\author{Opleiding Chemie, Saxion Deventer en Enschede}
+%\date{Leerjaar 2, kwartiel 2, studiejaar %\the\year/\NextYear{}}
 
 %---------------------
 %CONTENTS
@@ -107,17 +119,35 @@
 \lstset{language=r}
 \lstset{style=mystyle}
 
-\maketitle
+\makeatletter
+    \begin{titlepage}
+	\centering
+	\vspace*{1.5in}
+	\includegraphics[]{img/logodata.png}\par\vspace{1cm}
+	{\huge Dataverwerking \par}
+	{\Large Studiewijzer en Dictaat\par}
+	\vspace{1.5cm}
+	{\large Opleiding Chemie\par}
+	{\large Saxion Deventer en Enschede\par}
+
+
+	\vfill
+    \end{titlepage}
+\makeatother
+\thispagestyle{empty}
+\newpage
+
 \begin{center}
+
 {\Large Colofon}\\
 \vspace{15mm}
 \includegraphics[width=0.7\linewidth]{img/lg_saxion_rgb.png}
 \end{center}
 \vspace{10mm}
 Dit document is opgesteld door:\\
-Karin Heutinck (\href{k.j.b.heutinck@saxion.nl}{\textsf{k.j.b.heutinck@saxion.nl}})\\
-Taco Graafsma(\href{t.l.g.p.graafsma@saxion.nl}{\textsf{t.l.g.p.graafsma@saxion.nl}})\\
-Samuel Mok (\href{s.mok@saxion.nl}{\textsf{s.mok@saxion.nl}})\\
+Karin Heutinck (\href{k.j.b.heutinck@saxion.nl}{\textsf{k.j.b.heutinck@saxion.nl}}) - Multivariate dataverwerking \& DoE\\
+Taco Graafsma (\href{t.l.g.p.graafsma@saxion.nl}{\textsf{t.l.g.p.graafsma@saxion.nl}}) - Gegevensbeheer \\
+Samuel Mok (\href{s.mok@saxion.nl}{\textsf{s.mok@saxion.nl}}) - Datamanagement\\
 voor de opleiding Chemie van de Saxion Hogeschool ter behoeve van de leerlijn Dataverwerking in het jaar \the\year.
 
 Met dank aan Sonja Scheinhardt voor een deel van het materiaal voor Design of Experiments.
@@ -125,19 +155,47 @@ Met dank aan Sonja Scheinhardt voor een deel van het materiaal voor Design of Ex
 Dit dictaat heeft een CC4-BY-NC licentie (zie hieronder). Dit dictaat is geschreven in de taal \LaTeX\ in de editor Overleaf en is hier beschikbaar: \href{https://www.overleaf.com/read/sgpyzkvsfkpc
 }{overleaf.com}. De broncode is beschikbaar op de volgende GitHub repository: \href{https://github.com/MokSamuel/Studiewijzer-Dataverwerking}{https://github.com/MokSamuel/Studiewijzer-Dataverwerking}
 
-
+Voor het laatst aangepast op \today.
 \doclicenseThis
 
 
 \tableofcontents
 
+
+\setcounter{page}{1}
+ \backgroundsetup{
+  scale=1,
+  color=black,
+  opacity=1,
+  angle=0,
+  position=current page.south,
+  vshift=60pt,
+  contents={%
+  \small\sffamily%
+  \begin{minipage}{.8\textwidth}
+  \parbox[b]{.6\textwidth}{%
+    Dictaat Dataverwerking}\hfill
+  \textcolor{saxion}{\rule{\textwidth}{1.5pt}}\\
+  Opleiding Chemie - Saxion
+  \end{minipage}\hspace{.02\textwidth}%
+  \begin{minipage}{.18\textwidth}
+  \includegraphics[width=\linewidth,height=70pt,keepaspectratio]{img/logodata.png}
+  \end{minipage}%
+  }
+}
+
+
 \input{studiewijzer.tex}
-\input{multivariaat.tex}
+
 \input{datamanagement.tex}
+\input{multivariaat.tex}
 \input{gegevensbeheer.tex}
 \input{doe.tex}
 
+
 \begin{appendices}
+\backgroundsetup{contents={}}
+\input{appmultivariaat.tex}
 \input{templatedmp.tex}
 \end{appendices}
 

@@ -1,4 +1,38 @@
 \chapter{Gegevensbeheer}
 \label{chap:gegevensbeheer}
-2 lessen over databases
+Deze lessen gaan over (de techniek van) het gestructureerd opslaan van gegevens (data). Opslaan kan in de praktijk op veel verschillende manieren. Ongestructureerd, bijvoorbeeld door alles op briefjes te schrijven en die in een grote doos te gooien. Maar het zal al snel duidelijk zijn dat je op die manier nooit meer iets terug kunt vinden. Gestructureerde opslag kun je doen in een Word-document of een Excel-spreadsheet. Voor kleine sets met gegevens en niet al te ingewikkelde bewerkingen lukt dat nog wel. Maar de sets worden steeds groter (big data) en dan voldoen deze programma’s niet meer. De overtreffende trap wordt gevormd door de verzamelingen van bijvoorbeeld Google. Dan praat je tegenwoordig over petabytes aan data of meer. Om daar snel antwoorden uit te halen zijn niet alleen heel veel snelle computers nodig, maar ook speciale manieren van opslag, zoals Hadoop.
+Wij gaan er ergens tussenin zitten. Het zogenaamde relationele model heeft zich in de praktijk bewezen als model voor het opslaan van gegevens voor kleine tot grote bedrijven en organisaties. Het doel van gegevensbeheer is uiteindelijk dat je op het moment dat je ze nodig hebt een bepaalde selectie uit die berg gegevens kunt laten opzoeken. Daarvoor is een standaard vraagtaal ontwikkeld: Structured Query Language (SQL, uitgesproken als Sequel). De bedoeling van deze twee lessen is om kennis te maken met het opstellen van een opslagstructuur (datamodel), ervaring op te doen met het inrichten van deze structuur in een veelgebruikt programma (Access), en met het formuleren van selecties om de juiste antwoorden te krijgen op de vragen die je in je werk tegenkomt. Daarnaast komen wat beveiligingsaspecten aan de orde, want de data die bij chemisch onderzoek en chemische productie nodig is kan bijvoorbeeld behoorlijk concurrentiegevoelig zijn, nog afgezien van de AVG. Er wordt tot slot een beetje aandacht besteed aan een van de meest belangrijke databases in de chemiewereld: het Laboratorium Informatie Management Systeem (LIMS).
 
+\section{Datamodellen en MS Access}
+De wereld is samengesteld uit objecten: concrete (bv. boeken in bibliotheek, planten, computers, bodemmonsters...) en abstracte (adressen, meetresultaten, patiëntgegevens...). Objecten kun je op allerlei niveaus onderscheiden. Een object kan een onderdeel vormen van een ander object, overlappen met een ander object, en bestaan uit deelobjecten. Voor een specifieke toepassing kies je bepaalde objecten. Zo'n object heeft oneindig veel kenmerken/eigenschappen. Voor de toepassing zijn maar een paar van die kenmerken belangrijk.
+ Van het object boek kun je bijvoorbeeld de volgende kenmerken opsommen:
+\begin{itemize}
+    \item	titel
+    \item	auteur
+    \item	aantal pagina's
+    \item	onderwerp
+    \item	papiersoort
+    \item	prijs
+    \item	aanwezigheid index
+    \item	gebruikte soort inkt
+    \item	gebruikte hoeveelheid inkt
+    \item	gewicht
+    \item   etc.
+\end{itemize}
+
+
+Wanneer een bibliothecaris informatie wil bijhouden over de boeken in zijn bibliotheek zal het hem een zorg zijn hoeveel inkt nodig is om het boek te drukken. Wel belangrijk zijn bv. titel en auteur. Natuurlijk kan de bibliothecaris alle informatie wel bijhouden (theoretisch), maar voor veel van die gegevens is dat verspilde moeite.
+
+Wanneer je gegevens over bepaalde zaken wil gaan bijhouden moet je eerst vastleggen welk object (welke objecten) het betreft. Daarna moet je inventariseren welke eigenschappen in jouw geval belangrijk zijn. Je maakt dus een beschrijving, een abstract model van een object. Daar-voor wordt de term objecttype of entiteit gebruikt. Een objecttype bestaat uit een lijst van de relevante kenmerken of attributen. Je kunt bijvoorbeeld het objecttype 'persoon' definiëren. Kenmerken daarvoor zouden kunnen zijn: naam, adres en woonplaats. Tot nu toe zijn er nog geen concrete personen beschreven. Er is alleen een (abstracte) klasse 'persoon' gedefinieerd aan de hand van een aantal (abstracte) kenmerken. Die klasse kan nul of meer items bevatten, met waarden voor de kenmerken.
+
+Een dergelijk item wordt een occurrence genoemd. Elke occurrence heeft een set waarden voor de kenmerken, bv. naam = 'Petra Berkers', adres = 'Schoolstraat 10', woonplaats = 'Roodeschool'. Het is de bedoeling dat de kenmerken zo gekozen worden dat elke occurrence uniek aan te duiden is. Dat betekent dus dat alle items die in het bestand worden opgenomen een van de andere verschillende set waarden moet hebben.
+
+Objecttype, kenmerk en occurrence zijn termen uit de theorie van het gegevensbeheer. Bij programmatuur zijn een aantal andere termen in gebruik. Een objecttype wordt meestal een tabel genoemd. Soms wordt de term 'bestand' gebruikt, maar dat schept verwarring met bestand als vertaling van file. Een kenmerk wordt aangeduid met veld of kolom. Een occurrence tenslotte wordt meestal record, soms rij of regel genoemd. Een record bestaat dus uit een set waarden (voor elk van de kenmerken één) die betrekking hebben op een enkel concreet object. Een tabel kan nul of meer records bevatten. Verder is het mogelijk dat voor een bepaalde toepassing meerdere tabellen, die met elkaar samenhangen moeten worden bijgehouden. Zo'n stelsel tabellen wordt dan een database genoemd. De volledige beschrijving van de structuur van alle tabellen noemt men wel data dictionary. Dat is dus eigenlijk zelf weer een (gespecialiseerde) database!
+
+Er zijn in de loop van de tijd een aantal verschillende manieren ontwikkeld om gegevens op te slaan. Dat heeft consequenties voor de benodigde hoeveelheid opslagruimte, maar vooral voor de snelheid waarmee informatie kan worden opgezocht. Vooral bij grote informatiesystemen, zoals administratie van luchtvaartmaatschappijen, is dat erg belangrijk. Het meest overzichtelijk is het zogenaamde platte bestand. Daarin worden alle kenmerken in een enkele tabel verzameld. Afgezien van de meest eenvoudige structuren is dat een inefficiënte oplossing. Andere vormen zijn het hiërarchische en het netwerkmodel. Die zijn vooral in gebruik bij heel grote, op maat gemaakte systemen. Ze zijn efficiënt (voor bepaalde toepassingen) maar ingewikkeld en star. Op een gegeven moment is men gegevensbeheer vanuit theoretisch oogpunt gaan bekijken. Daarbij werd de hulp van relationele algebra ingeroepen. Het resultaat was het zogenaamde relationele model. Bij de eerder genoemde modellen liggen alle relaties tussen de objecten vast in de structuur. Bij het relationele model worden de objecttypen gedefinieerd, maar de relaties nog niet. Er worden alleen voorzorgen getroffen, die het op het moment dat het nodig is mogelijk maken twee tabellen aan elkaar te koppelen. Tegelijkertijd werd een vraagtaal ontwikkeld die het mogelijk maakt elke willekeurige deelverzameling uit een gegevensbestand te lichten (Structured Query Language, ofwel SQL). De ontwerper van het relationele model, E.F. Codd, heeft een aantal criteria opgesomd waaraan een relationele database (theoretisch) zou moeten voldoen. Technisch blijkt dat nog niet helemaal te realiseren te zijn. De eerste relationele database was DB2, ontwikkeld door IBM. dBASE was het eerste systeem voor de PC dat relationeel genoemd werd. De laatste tijd worden de eisen voor data-basesystemen steeds hoger. Zo wil men tegenwoordig ook beeld en geluid kunnen opslaan. Er wordt daarom gewerkt aan weer nieuwe modellen, zoals het object georiënteerde model.
+
+... wordt nog aangevuld ...
+
+\subsection{Queries, Beveiliging, en Ontwerp}
+
+... wordt nog aangevuld ...
